@@ -6,6 +6,8 @@ SQLALCHEMY_DATABASE_URL = "postgresql://postgres:81606700@localhost:5433/condo_d
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL,
+    pool_size=20, 
+    max_overflow=0,
 )
 # conn = engine.connect() 
 

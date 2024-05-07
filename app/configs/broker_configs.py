@@ -3,5 +3,5 @@ mqtt_broker_configs = {
     "PORT": 1883,
     "CLIENT_NAME": "client_se",
     "KEEPALIVE": 60,
-    "TOPIC": "SensorTempP"
+    # "TOPIC": ["CondominioSensores", "LuzExternaEstado", "AlarmeEstado", "TempoEsquecimentoEstado", "AlarmeEnableEstado"]
 }

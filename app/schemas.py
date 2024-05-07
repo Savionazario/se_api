@@ -25,4 +25,21 @@ class GateStatus(BaseModel):
     class Config:
         orm_mode = True
 
+class CondominiumData(BaseModel):
+    alarme_enable_estado: bool
+    alarme_estado: bool
+    tempo_esquecimento: int
+    luz_externa: bool
+    time: datetime
+
+    class Config:
+        orm_mode = True
+
+class CondominiumConfigs(BaseModel):
+    alarme_enable_estado: bool
+    tempo_esquecimento: int
+
+    class Config:
+        orm_mode = True
+
 
