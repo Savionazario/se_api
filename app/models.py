@@ -31,3 +31,17 @@ class CondominiumConfigs(Base):
     luz_externa = Column(Boolean)
     tempo_esquecimento = Column(Integer)
     time = Column(DateTime)
+
+class Reserva(Base):
+    __tablename__ = 'reservas'
+
+    id = Column(Integer, primary_key=True, index=True)
+    data_inicio = Column(DateTime)
+    data_final = Column(DateTime)
+
+class RFID(Base):
+    __tablename__ = 'rfid'
+
+    id = Column(Integer, primary_key=True, index=True)
+    codigo = Column(String)
+    time = Column(DateTime)

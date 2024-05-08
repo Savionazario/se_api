@@ -42,4 +42,12 @@ class CondominiumConfigs(BaseModel):
     class Config:
         orm_mode = True
 
+class ReservaSchema(BaseModel):
+    data_inicio: datetime
+    data_final: datetime
+
+    class Config:
+        orm_mode = True
+
+
 

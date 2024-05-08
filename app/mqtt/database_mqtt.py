@@ -65,3 +65,10 @@ def saveConfigDataInDB(data: schemas.CondominiumData):
 
             db.commit()
             db.refresh(config)
+
+def saveRFID(codigo, time):
+    with contextmanager(get_db)() as db:
+        rfid = models.RFID(codigo=codigo, time=time)
+        db.add(rfid)
+        db.commit()
+        db.refresh(rfid)
